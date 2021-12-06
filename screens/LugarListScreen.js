@@ -104,7 +104,7 @@ export default function LugarListScreen(props){
           style={[globalStylesScreens.list]}
           data={lugares}
           renderItem={({item}) => <ListLugarItem item={item} />}
-          keyExtractor={item=>item.nombre}
+          keyExtractor={item=>item.id}
           />
         </View>
       </ImageBackground>
