@@ -6,6 +6,7 @@ import HomeScreen from '../screens/HomeScreen';
 import PersonajeListScreen from '../screens/PersonajeListScreen';
 import LugarListScreen from '../screens/LugarListScreen';
 import CapituloListScreen from '../screens/CapituloListScreen';
+import PersonajeScreen from '../screens/PersonajeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +47,15 @@ const MainStack = () => {
                 <Stack.Screen 
                     name = 'Capitulos'
                     component = { CapituloListScreen }
+                    options={{
+                        headerStyle: {
+                            backgroundColor: '#4F892D'
+                        }
+                    }}
+                />
+                <Stack.Screen 
+                    name = 'Personaje'
+                    component = { PersonajeScreen }
                     options={{
                         headerStyle: {
                             backgroundColor: '#4F892D'

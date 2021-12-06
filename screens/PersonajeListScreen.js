@@ -6,7 +6,7 @@ import ButtonSearch from "../components/ButtonSearch";
 import { globalStylesScreens } from '../styles/globalStylesScreens';
 import { globalColors } from '../styles/globalColors';
 
-export default function PersonajeListScreen(props){
+export default function PersonajeListScreen({ navigation }){
 
   const image = require("../assets/fondo1.png");
 
@@ -104,8 +104,8 @@ export default function PersonajeListScreen(props){
           <FlatList
           style={[globalStylesScreens.list]}
           data={personajes}
-          renderItem={({item}) => <ListPersonajeItem item={item} />}
-          keyExtractor={item=>item.name}
+          renderItem={({item}) => <ListPersonajeItem navigation={navigation} item={item} />}
+          keyExtractor={item=>item.id}
           />
         </View>
       </ImageBackground>

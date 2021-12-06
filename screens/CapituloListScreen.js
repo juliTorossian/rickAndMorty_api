@@ -103,7 +103,7 @@ export default function CapituloListScreen(props){
           style={[globalStylesScreens.list]}
           data={lugares}
           renderItem={({item}) => <ListCapItem item={item} />}
-          keyExtractor={item=>item.nombre}
+          keyExtractor={item=>item.id}
           />
         </View>
       </ImageBackground>

@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
 
-export default function ListPersonajeItem( {item} ) {
+export default function ListPersonajeItem( { navigation, item } ) {
 
     return (
         <TouchableOpacity
-            onPress={ () => console.log('hola') }
+            onPress={ () => {
+                navigation.navigate('Personaje', {
+                    id: item.id
+                }) 
+            }}
         >
             <View style = {[ styles.container ]}>
                 <Image style = {[ styles.imagen ]}
@@ -17,12 +21,12 @@ export default function ListPersonajeItem( {item} ) {
                     <Text style = {[ styles.text ]}>
                         {[item.name]}
                     </Text>
-                    <Text style = {[ styles.data ]}>
+                    {/* <Text style = {[ styles.data ]}>
                         {[item.gender]}
                     </Text>
                     <Text style = {[ styles.data ]}>
                         {[item.status]}
-                    </Text>
+                    </Text> */}
                     <Text style = {[ styles.data ]}>
                         {[item.origin.name]}
                     </Text>

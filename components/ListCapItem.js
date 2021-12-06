@@ -6,7 +6,6 @@ export default function ListCapItem( {item} ) {
 
     return (
         <TouchableOpacity
-            onPress={ () => console.log('hola') }
         >
             <View style = {[ styles.container, globalColors.verdeButtons ]}>
                 <Text style = {[ styles.text ]}>
